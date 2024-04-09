@@ -11,11 +11,11 @@
     <nav>
       <a href="elon.html">Elon</a>
       <a href="baiden.html">Baiden</a>
-      <a href="messi.html">Messi</a>
+      <div id="messi-link">Messi</div>
     </nav>
     <main>
-      <p>
-        Elon Musk is a visionary entrepreneur known for his ambitious pursuits
+      <p id="text">
+        Elon1 Musk is a visionary entrepreneur known for his ambitious pursuits
         in space exploration, sustainable energy, and transportation innovation.
         Born in South Africa in 1971, Musk co-founded Zip2, PayPal, SpaceX,
         Tesla Inc., Neuralink, and The Boring Company, demonstrating his diverse
@@ -31,7 +31,22 @@
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyIN12XTr66j_7l7Id29y0_GkOwlgvA6qQOUmwvJ-XOw&s"
         alt="elon"
+        id="elon-img"
       />
     </main>
+    <script>
+      const messiImg = 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg';
+      const messiArticle = `Lionel Messi, often hailed as one of the greatest footballers of all
+        time, was born on June 24, 1987, in Rosario, Argentina. Messi's`
+
+      const messiLink = document.getElementById('messi-link');
+
+      messiLink.onclick = function () {
+        document.getElementById('elon-img').src = messiImg
+
+        document.getElementById('text').innerHTML = messiArticle
+      }
+
+    </script>
   </body>
 </html>
